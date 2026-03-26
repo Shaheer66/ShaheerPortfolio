@@ -1,14 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
-import * as Lucide from "lucide-react";
-
-// Manually pull the icons to ensure they exist regardless of naming convention
-const GithubIcon = Lucide.Github || Lucide.GithubIcon;
-const LinkedinIcon = Lucide.Linkedin || Lucide.LinkedinIcon;
-const { 
-  Mail, Cpu, Database, Cloud, Mic, Code2, Terminal, Server, 
-  Sparkles, Workflow, ExternalLink, ChevronRight, Bot, X, 
-  Send, Loader2, BrainCircuit, Globe, Layers, Phone, MapPin 
-} = Lucide;
+import { 
+  Github as GithubIcon, 
+  Linkedin as LinkedinIcon, 
+  Mail, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Mic, 
+  Code2, 
+  Terminal, 
+  Server, 
+  Sparkles, 
+  Workflow, 
+  ExternalLink, 
+  ChevronRight, 
+  Bot, 
+  X, 
+  Send, 
+  Loader2, 
+  BrainCircuit, 
+  Globe, 
+  Layers, 
+  Phone, 
+  MapPin 
+} from "lucide-react";
 const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState('');

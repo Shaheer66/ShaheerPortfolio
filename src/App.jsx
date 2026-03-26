@@ -410,7 +410,7 @@ const App = () => {
           </div>
           <div className="flex gap-4">
             <a href="https://github.com/Shaheer66" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><GithubIcon className="w-5 h-5" /></a>
-            <a href="https://www.linkedin.com/in/ahmadshaheer" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/ahmadshaheer" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><LinkedinIcon className="w-5 h-5" /></a>
           </div>
         </div>
       </nav>

@@ -289,9 +289,30 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Github, Linkedin, Sparkles, ExternalLink, ChevronRight, 
-  Bot, X, Send, Globe, Layers, Mic, Cloud 
-} from 'lucide-react';
+  Github as GithubIcon, 
+  Linkedin as LinkedinIcon, 
+  Mail, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Mic, 
+  Code2, 
+  Terminal, 
+  Server, 
+  Sparkles, 
+  Workflow, 
+  ExternalLink, 
+  ChevronRight, 
+  Bot, 
+  X, 
+  Send, 
+  Loader2, 
+  BrainCircuit, 
+  Globe, 
+  Layers, 
+  Phone, 
+  MapPin 
+} from "lucide-react";
 
 const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -388,7 +409,7 @@ const App = () => {
             <a href="mailto:shaheer14326@gmail.com" className="hover:text-white transition-colors">Contact</a>
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/Shaheer66" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
+            <a href="https://github.com/Shaheer66" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><GithubIcon className="w-5 h-5" /></a>
             <a href="https://www.linkedin.com/in/ahmadshaheer" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>

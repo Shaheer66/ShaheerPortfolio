@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Github as GithubIcon, 
-  Linkedin as LinkedinIcon, 
   Mail, 
   Cpu, 
   Database, 
@@ -24,6 +23,7 @@ import {
   Phone, 
   MapPin 
 } from "lucide-react";
+import { Linkedin as LinkedinIcon } from 'lucide-react';
 const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState('');

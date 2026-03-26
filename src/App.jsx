@@ -320,9 +320,4 @@ const App = () => {
 };
 
 export default App;
-  
 
-
-
-
-port default App;

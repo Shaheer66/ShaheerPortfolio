@@ -47,7 +47,9 @@ const App = () => {
   }, [messages, isChatOpen]);
 
   const askGemini = async (query) => {
-    const apiKey = ""; 
+    // Vercel reads this exact environment variable natively
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY; 
+    
     const systemPrompt = `You are the AI Assistant for Shaheer Ahmad, an AI Engineer.
     Experience:
     1. Associate Data Scientist at Brickclay: RAG pipelines, Text-to-SQL for billion-row DW, AWS SageMaker.
@@ -117,8 +119,8 @@ const App = () => {
             <a href="mailto:shaheer14326@gmail.com" className="hover:text-white transition-colors">Contact</a>
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/Shaheer66" target="_blank" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
-            <a href="https://www.linkedin.com/in/ahmadshaheer" target="_blank" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+            <a href="https://github.com/Shaheer66" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><GithubIcon className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/ahmadshaheer" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white"><LinkedinIcon className="w-5 h-5" /></a>
           </div>
         </div>
       </nav>
@@ -143,7 +145,7 @@ const App = () => {
             <button onClick={() => setIsChatOpen(true)} className="px-6 py-3 rounded-lg bg-white text-slate-900 font-bold flex items-center gap-2 hover:bg-slate-200 transition-colors">
               <Bot className="w-5 h-5" /> Chat with AI Twin
             </button>
-            <a href={resumeLink} target="_blank" className="px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-bold flex items-center gap-2 transition-colors">
+            <a href={resumeLink} target="_blank" rel="noreferrer" className="px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-bold flex items-center gap-2 transition-colors">
               <ExternalLink className="w-5 h-5" /> View Full Resume
             </a>
           </div>
@@ -167,11 +169,11 @@ const App = () => {
                   <h3 className="text-xl font-bold text-white">Associate Data Scientist</h3>
                   <span className="text-xs font-bold text-purple-400">2025 - Present</span>
                 </div>
-                <p className="text-slate-400 text-sm mb-4">Brickclay • Pakistan</p>
+                <p className="text-slate-400 text-sm mb-4">Brickclay &bull; Pakistan</p>
                 <ul className="space-y-2 text-sm text-slate-300">
-                  <li>• Built Text-to-SQL RAG over billion-row data warehouse with strict governance.</li>
-                  <li>• Deployed churn prediction models on AWS SageMaker with Lambda pipelines.</li>
-                  <li>• Developed autonomous outbound voice agents using LangGraph.</li>
+                  <li>&bull; Built Text-to-SQL RAG over billion-row data warehouse with strict governance.</li>
+                  <li>&bull; Deployed churn prediction models on AWS SageMaker with Lambda pipelines.</li>
+                  <li>&bull; Developed autonomous outbound voice agents using LangGraph.</li>
                 </ul>
               </div>
 
@@ -182,10 +184,10 @@ const App = () => {
                   <h3 className="text-xl font-bold text-white">AI Engineer</h3>
                   <span className="text-xs font-bold text-blue-400">2024 - 2025</span>
                 </div>
-                <p className="text-slate-400 text-sm mb-4">One Tech & AI</p>
+                <p className="text-slate-400 text-sm mb-4">One Tech &amp; AI</p>
                 <ul className="space-y-2 text-sm text-slate-300">
-                  <li>• Production LLM integration focusing on latency and cost optimization.</li>
-                  <li>• Built multi-agent reasoning workflows for enterprise automation.</li>
+                  <li>&bull; Production LLM integration focusing on latency and cost optimization.</li>
+                  <li>&bull; Built multi-agent reasoning workflows for enterprise automation.</li>
                 </ul>
               </div>
 
@@ -198,8 +200,8 @@ const App = () => {
                 </div>
                 <p className="text-slate-400 text-sm mb-4">Zong (CMPak)</p>
                 <ul className="space-y-2 text-sm text-slate-300">
-                  <li>• Large-scale telecom data analysis for network performance insights.</li>
-                  <li>• Pattern recognition in high-velocity streaming data using Python.</li>
+                  <li>&bull; Large-scale telecom data analysis for network performance insights.</li>
+                  <li>&bull; Pattern recognition in high-velocity streaming data using Python.</li>
                 </ul>
               </div>
 
@@ -212,7 +214,7 @@ const App = () => {
                 </div>
                 <p className="text-slate-400 text-sm mb-4">BehinDev</p>
                 <ul className="space-y-2 text-sm text-slate-300">
-                  <li>• Developed time-series forecasting models for e-commerce demand.</li>
+                  <li>&bull; Developed time-series forecasting models for e-commerce demand.</li>
                 </ul>
               </div>
             </div>
@@ -228,10 +230,24 @@ const App = () => {
                     </div>
                   ))}
                 </div>
+                
+                {/* Visual Fixes applied here */}
+                <div className="mt-8 pt-6 border-t border-white/5 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Cloud className="w-5 h-5 text-orange-500" />
+                    <span className="text-xs text-slate-300">AWS Bedrock, SageMaker</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Globe className="w-5 h-5 text-blue-500" />
+                    <span className="text-xs text-slate-300">Azure AI, Container Registry</span>
+                  </div>
+                </div>
+
                 <div className="mt-8 pt-6 border-t border-white/5">
                   <a 
                     href={resumeLink} 
                     target="_blank" 
+                    rel="noreferrer"
                     className="w-full flex items-center justify-between p-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all group"
                   >
                     View Full Portfolio <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -270,7 +286,7 @@ const App = () => {
             <div className="p-4 bg-gradient-to-r from-cyan-900/40 to-purple-900/40 border-b border-slate-700/50 flex justify-between items-center backdrop-blur-md">
               <div className="flex items-center gap-2">
                 <Bot className="w-5 h-5 text-white" />
-                <span className="text-sm font-bold text-white">Shaheer's AI Twin</span>
+                <span className="text-sm font-bold text-white">Shaheer&apos;s AI Twin</span>
               </div>
               <button onClick={() => setIsChatOpen(false)} className="text-slate-400 hover:text-white"><X className="w-5 h-5" /></button>
             </div>
@@ -297,10 +313,16 @@ const App = () => {
       </div>
 
       <footer className="py-12 text-center text-xs text-slate-600 border-t border-white/5">
-        <p>© 2025 Shaheer Ahmad. Built for high-performance AI roles.</p>
+        <p>&copy; 2025 Shaheer Ahmad. Built for high-performance AI roles.</p>
       </footer>
     </div>
   );
 };
 
 export default App;
+  
+
+
+
+
+port default App;

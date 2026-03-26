@@ -1,3 +1,5 @@
+
+
 {
   "name": "portfolio",
   "private": true,
@@ -10,7 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lucide-react": "^1.7.0",
+    "lucide-react": "0.460.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

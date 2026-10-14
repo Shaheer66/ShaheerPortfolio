@@ -756,6 +756,7 @@ const App = () => {
             {projects.map((project, index) => <ProjectCard key={project.title} project={project} index={index} />)}
           </div>
         </section>
+          
 
         <section id="experience" className="scroll-mt-28">
           <SectionHeading
